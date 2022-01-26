@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>About us & Feedback</title>
+    <style>
+        .flexContainer{
+           display: flex;
+           background-color: white;
+           align-content: space-between;
+       }
+
+       .flexContainer > div, div {
+           background-color: white;
+           margin:5px;
+       }
+
+       
+       body {
+       margin: 0;
+       
+     }
+
+     header, footer {
+       background: green;
+       height: 100px;
+     }
+
+     h1 {
+       text-align: center;
+       color: white;
+       line-height: 100px;
+       margin: 0;
+     }
+
+     article {
+       padding: 10px;
+       margin: 10px;
+       background: lightgoldenrodyellow;
+       
+
+     }
+     section{
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+     }
+     .leftbar{
+         color: black;
+         width: 750px;
+         text-align: center;
+         background-color: lightgoldenrodyellow;
+         
+     }
+     .rightbar{
+         background-color: white;
+     }
+     </style>
+</head>
+<body>
+    <header>
+        <h1>About us & Feedback</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home page<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About us & feedback</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <div class="flexContainer">
+        <div class="leftbar">
+            <h2>Our policies </h2><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLKTGWH398Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="images/fairtrade.jpg">
+            <img src="images/joutsenlogo.jpg">
+        </div>
+
+    <div>
+    <section>
+        
+      <article>
+        <h2>Our restaurant</h2>
+        <p>
+            We are a small Italian restaurant in the hearth of Hämeenlinna. We have a small but tight staff of five and we make food with love just for you! We use only pure ingredients and our food is top quality!
+            If you have any allergies or you are on a special diet we have multiple options for you and every meal is customizable just for you.
+        </p>
+      </article>
+
+      <article>
+        <h2>Contact information</h2>
+
+        <p>
+        Email: <em>liiba.laaba@gmail.com</em> <br>
+        Phone: <em>0440314893</em> <br>
+        Address: <em>Kaivokatu 8, Hämeenlinna 13100</em>
+        </p>
+      </article>
+
+      <article>
+        <h2>Feedback</h2>
+        <p>
+            If you have any complaints or commendations we encourage you to send us feedback about it! You can do so below by stating your name. <br>
+            If you want us to get back to you fill your email or phone number in the field below and we'll get back to you as soon as possible!
+        </p>
+        <form>
+            
+    Name:  <input name="name" type="text" placeholder="First- and Lastname"> <br> 
+    <br>
+    Email: <input email="Email" type="text" placeholder="Email"> <br>
+    <br>
+    Phone: <input phone="Phone" type="text" placeholder="Phone"> <br>
+    <br>
+    
+    <textarea cols="50" name="comments" rows="5" placeholder="Tell us about your experience"></textarea><br />
+    <input type="submit" value="Submit">
+
+    
+    </form>
+
+      </article>
+  </div>
+    </div>
+
+
+    <footer>
+      <h1>Thank you for visiting and we hope to see you again!</h1>
+  </footer>
+</body>
+<!--Page & nav bars made by Riku Nieminen-->
+</html>
