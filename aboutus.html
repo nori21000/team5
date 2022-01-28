@@ -9,7 +9,7 @@
     <style>
         .flexContainer{
            display: flex;
-           background-color: white;
+           background-color:rgb(37, 36, 36);
            align-content: space-between;
        }
 
@@ -24,10 +24,38 @@
        
      }
 
-     header, footer {
+     header{
        background: rgb(37, 36, 36);
        height: 50px;
      }
+     footer {
+        padding-top: 50px;
+        border-top: 2px solid white;
+        position: static;
+        background-color: rgb(37, 36, 36);
+        bottom: 0%;
+        width: 100%;
+      }
+      .content a:link {
+        color: white;
+      }
+      .content a:hover {
+        color: rgb(255, 223, 162);
+      }
+      .content a:visited {
+        color: black;
+      }
+  
+      .main-content {
+        display: flex;
+        margin-left: 20px;
+      }
+  
+      .main-content .box {
+        flex-basis: 50%;
+        margin-right: 20px;
+        text-align: center;
+      }
 
      h1 {
        text-align: center;
@@ -63,7 +91,7 @@
      </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -102,7 +130,7 @@
         <h2>Our restaurant</h2>
         <p>
             We are a small Italian restaurant in the hearth of Hämeenlinna. We have a small but tight staff of five and we make food with love just for you! We use only pure ingredients and our food is top quality!
-            If you have any allergies or you are on a special diet we have multiple options for you and every meal is customizable just for you.
+            If you have any allergies or you are on a special diet we have multiple options for you and every meal is customizable just for you..
         </p>
       </article>
 
@@ -143,8 +171,47 @@
 
 
     <footer>
-      <h1>Thank you for visiting and we hope to see you again!</h1>
-  </footer>
+      <div class="main-content">
+        <div class="left box">
+          <h3>Sosiaalinen media</h3>
+          <div class="content">
+            <img
+              src="images/fb_ig1.png"
+              alt="pic of facebook and instagram logo"
+            />
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+            <p><a href="https://fi-fi.facebook.com/">Facebook</a></p>
+          </div>
+        </div>
+        <div class="center box">
+          <h3>Osoite</h3>
+          <div class="content">
+            <div class="place">
+              <span class="text">Kaivokatu 8, Hämeenlinna </span>
+            </div>
+            <div class="phone">
+              <span class="text">Phone: 0440314893</span>
+            </div>
+            <div class="email">
+              <span class="text">liiba.laaba@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="right box">
+          <h3>Aukioloajat:</h3>
+          <div class="content">
+            <div class="time">
+              <span class="text">Arvoisat asikkaamme!</span>
+              <p>
+                Ravintolapalvelumme ovat suljettuna <br />
+                20.1 -1.3.2022 Välisenä aikana. <br />Tervetuloa uudestaan
+                vierailemaan 5.3.2022
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 <!--Page & nav bars made by Riku Nieminen-->
 </html>
