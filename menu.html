@@ -8,9 +8,14 @@
     <title>Menu</title>
     <style>
     
+    body {
+      background-color: rgb(37, 36, 36);
+    }
+    
+    
+    
     header {
-      padding: 10px;
-       margin: 10px;
+      font-family: "Lobster", cursive;
        background: rgb(37, 36, 36);
        color: white;
        
@@ -31,16 +36,14 @@
     }
 
     
-    div > img {
-      width: 800px;
-      height : 300px;
-      display: block;
-      margin-left: auto;
-      border-radius: 10px;
+    img {
+    width: auto ;
+    max-width: 100% ;
+    height: auto ;
+    padding: 10px;
+    
+}
 
-
-
-    } 
 
     section {
       float: right;
@@ -48,14 +51,44 @@
        margin: 10px;
        background: rgb(37, 36, 36);
        color: white;
+       border: 2px solid white;
     }
+
+    footer {
+        padding-top: 50px;
+        border-top: 2px solid white;
+        position: static;
+        background-color: rgb(37, 36, 36);
+        bottom: 0%;
+        width: 100%;
+      }
+      .content a:link {
+        color: white;
+      }
+      .content a:hover {
+        color: rgb(255, 223, 162);
+      }
+      .content a:visited {
+        color: black;
+      }
+  
+      .main-content {
+        display: flex;
+        margin-left: 20px;
+      }
+  
+      .main-content .box {
+        flex-basis: 50%;
+        margin-right: 20px;
+        text-align: center;
+      }
 
 
 
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -85,13 +118,15 @@
       <div>
         <section>
           <article>
-        <h3>Take away orders <br>
+            
+        <h3>Take away orders
           and table reservations</h3>
+            
           <p>Call us: 0440314893</p>
           </article>
 
         <article>
-          <h5>Our food is made with love <br>
+          <h5>Our food is made with love
             and good Italian ingredients. <br> </h5>
            <h5> All portions are available <i>gluten-free</i>.
           </h5>
@@ -102,7 +137,11 @@
       </div>
 
       <div>
-        <img src="images/pasta1.jpg">
+        <div style="width: auto; text-align: center; position: relative;">
+          <div style="display: inline-block;">
+            <img src="images/pasta1.jpg">
+            
+          </div>
         </div>
     
 
@@ -283,6 +322,50 @@
 
                                                               </div>
                                                                 </div>
+
+                                                                <footer>
+                                                                  <div class="main-content">
+                                                                    <div class="left box">
+                                                                      <h3>Sosiaalinen media</h3>
+                                                                      <div class="content">
+                                                                        <img
+                                                                          src="images/fb_ig1.png"
+                                                                          alt="pic of facebook and instagram logo"
+                                                                        />
+                                                                        <p><a href="https://www.instagram.com/%22%3EInstagram">Instagram</a></p>
+                                                                        <p><a href="https://fi-fi.facebook.com/%22%3EFacebook">Facebook</a></p>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="center box">
+                                                                      <h3>Osoite</h3>
+                                                                      <div class="content">
+                                                                        <div class="place">
+                                                                          <span class="text">Kaivokatu 8, Hämeenlinna </span>
+                                                                        </div>
+                                                                        <div class="phone">
+                                                                          <span class="text">Phone: 0440314893</span>
+                                                                        </div>
+                                                                        <div class="email">
+                                                                          <span class="text">liiba.laaba@gmail.com</span>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="right box">
+                                                                      <h3>Aukioloajat:</h3>
+                                                                      <div class="content">
+                                                                        <div class="time">
+                                                                          <span class="text">Arvoisat asikkaamme!</span>
+                                                                          <p>
+                                                                            Ravintolapalvelumme ovat suljettuna <br />
+                                                                            20.1 -1.3.2022 Välisenä aikana. <br />Tervetuloa uudestaan
+                                                                            vierailemaan 5.3.2022
+                                                                          </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </footer>
+                                                            
                                                                               </div>
     
 </body>
