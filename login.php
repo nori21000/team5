@@ -3,7 +3,7 @@ session_start();
 $json=isset($_POST["username"]) ? $_POST["username"] : "";
 
 if (!($user=tarkistaJson($json))){
-    print "Täytä kaikki kentät";
+    print "Fill all required fields";
     exit;
 }
 
@@ -38,7 +38,7 @@ try{
     print $json;
 }
 catch(Exception $e){
-    print "Jokin virhe!";
+    print "Something went wrong!";
 }
 ?>
 

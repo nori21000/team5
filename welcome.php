@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION["kayttaja"])){
+if (!isset($_SESSION["users"])){
     header("Location:..login.html");
     exit;
 }
