@@ -99,11 +99,30 @@
      form{
        text-align: center;
      }
+     @media only screen and (max-width: 600px) {
+
+.carousel-item{ 
+
+height: 200px;
+
+}
+
+.leftbar{ display: flex; flex-flow: column;}
+.rightbar{ display: flex; flex-flow: column; }
+.main-content{ 
+          display: flex; flex-flow: wrap; justify-content: center;
+        }
+.main-content .box {
+margin-bottom: 30px;
+}
+
+}
     
      </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"> <img src="images/logo-1.jpg" alt="logo"></a>
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -120,6 +139,11 @@
             <li class="nav-item">
               <a class="nav-link" href="aboutus.html">About us & feedback</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registeration.php">register</a>
+            </li>
+            
+            
           </ul>
           
         </div>
@@ -130,9 +154,9 @@
       <div class="flexContainer">
         <div class="leftbar">
             <h2>Our policies </h2><br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLKTGWH398Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <img src="images/fairtrade.jpg">
-            <img src="images/joutsenlogo.jpg">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLKTGWH398Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="images/fairtrade.jpg" alt=" ">
+            <img src="images/joutsenlogo.jpg" alt=" ">
         </div>
 
     <div>
@@ -166,9 +190,9 @@
             
     Name:  <input name="name" type="text" placeholder="First- and Lastname"> <br> 
     <br>
-    Email: <input email="Email" type="text" placeholder="Email"> <br>
+    Email: <input type="email" id="email" name="email" placeholder="Email"> <br>
     <br>
-    Phone: <input phone="Phone" type="text" placeholder="Phone"> <br>
+    Phone: <input type="tel" id="phone" name="phone" placeholder="Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> <br>
     <br>
     
     <textarea cols="50" name="comments" rows="5" placeholder="Tell us about your experience"></textarea><br />
@@ -178,6 +202,7 @@
     </form>
 
       </article>
+      </section>
   </div>
     </div>
 
@@ -187,11 +212,9 @@
         <div class="left box">
           <h3>Sosiaalinen media</h3>
           <div class="content">
-            <img
-              src="images/fb_ig1.png"
-              alt="pic of facebook and instagram logo"
-            />
+            <img src="images/ig-small.png" alt=" ">
             <p><a href="https://www.instagram.com/">Instagram</a></p>
+            <img src="images/fb_small.png" alt=" ">
             <p><a href="https://fi-fi.facebook.com/">Facebook</a></p>
           </div>
         </div>
