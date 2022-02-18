@@ -15,8 +15,8 @@ function lahetaUsers(lomake){
 	xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
-		    if (this.responseText=="ok"){
-		    	window.location.assign("welcome.php");
+		    if (this.responseText.trim() == "kiitos"){
+		    	window.location.assign("./index.html");
 		    }
 		    else{
 			    document.getElementById("result").innerHTML = this.responseText;
@@ -30,13 +30,13 @@ function lahetaUsers(lomake){
 </script>
 
 <h2>Log in</h2>
-<form id='userlomake'>
+<form id='userslomake'>
 Username: <input type='text' name='username' value='' placeholder='Username'><br>
 Password: <input type='text' name='password' value='' placeholder='Password'><br>
 <input type='button' name='ok' value='Ok' onclick='lahetaUsers(this.form);'><br>
 </form>
 <p id='result'>
-Palaute tähän
+
 </p>
 
 </body>
