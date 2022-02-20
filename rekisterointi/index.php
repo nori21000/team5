@@ -8,7 +8,7 @@ if (isset($_GET['logout'])) {
     header("location: login.php");
 }
 ?>
-<!DOCTYPE html>s
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Home</title>
