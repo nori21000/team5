@@ -1,6 +1,6 @@
 <?php
 session_start();
-$json=isset($_POST["username"]) ? $_POST["username"] : "";
+$json=isset($_POST["user"]) ? $_POST["user"] : "";
 
 if (!($user=tarkistaJson($json))){
     print "Fill all required fields";
@@ -11,7 +11,7 @@ mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 
 
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "users");
+    $yhteys=mysqli_connect("db", "root", "password", "registration");
 }
 catch(Exception $e){
     print "Yhteysvirhe";
@@ -23,7 +23,7 @@ try{
     
     $stmt=mysqli_prepare($yhteys, $sql);
     
-    mysqli_stmt_bind_param($stmt, 'ss', $username->username, $password->password);
+    mysqli_stmt_bind_param($stmt, 'ss', $user->username, $user->password);
     
     mysqli_stmt_execute($stmt);
     
@@ -35,7 +35,10 @@ try{
     }
     
     mysqli_close($yhteys);
-    print $json;
+    
+    //print $json;
+
+    print "kiitos";
 }
 catch(Exception $e){
     print "Something went wrong!";
@@ -49,9 +52,9 @@ function tarkistaJson($json){
         return false;
     }
     $user=json_decode($json, false);
-    if (empty($username->username) || empty($password->password)){
+    if (empty($user->username) || empty($user->password)){
         return false;
     }
-    return $username;
+    return $user;
 }
 ?>

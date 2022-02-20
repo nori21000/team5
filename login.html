@@ -3,6 +3,25 @@
 <head>
 <meta charset="utf-8">
 <title>Log In</title>
+<style>
+	body {
+	  background-color: rgb(37, 36, 36);
+	  text-align: center;
+	  color: white;
+	  font-size: 20px;
+	}
+	h2 {
+	  color: white;
+	  text-align: center;
+	}
+	form {
+	  color: rgb(255, 255, 255);
+	  border: 1px solid rgb(255, 255, 255);
+      padding: 1.5%;
+      text-align: center;
+	}
+	
+  </style>
 </head>
 <body>
 <script>
@@ -15,8 +34,8 @@ function lahetaUsers(lomake){
 	xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
-		    if (this.responseText=="ok"){
-		    	window.location.assign("welcome.php");
+		    if (this.responseText.trim() == "kiitos"){
+		    	window.location.assign("./index.html");
 		    }
 		    else{
 			    document.getElementById("result").innerHTML = this.responseText;
@@ -30,13 +49,13 @@ function lahetaUsers(lomake){
 </script>
 
 <h2>Log in</h2>
-<form id='userlomake'>
+<form id='userslomake'>
 Username: <input type='text' name='username' value='' placeholder='Username'><br>
-Password: <input type='text' name='password' value='' placeholder='Password'><br>
+Password: <input type='password' name='password' value='' placeholder='Password'><br>
 <input type='button' name='ok' value='Ok' onclick='lahetaUsers(this.form);'><br>
 </form>
 <p id='result'>
-Palaute tähän
+When logged in, you get -10% of food prices.
 </p>
 
 </body>
