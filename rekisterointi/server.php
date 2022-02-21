@@ -8,7 +8,7 @@ $errors = array();
 
 
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
-$db = mysqli_connect('db', 'root', 'password', 'registration');
+$db = mysqli_connect('localhost', 'TRTKP21A3_5', 'DOH0GX1X', 'wp_TRTKP21A3_5');
 
 
 if (isset($_POST['reg_user'])) {
