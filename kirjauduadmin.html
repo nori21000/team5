@@ -4,17 +4,7 @@
     <meta charset="utf-8" />
     <title>Kirjaudu sisään</title>
 
-    <style>
-      body {
-        background-color: rgb(37, 36, 36);
-      }
-      h2 {
-        color: white;
-      }
-      form {
-        color: rgb(255, 255, 255);
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
   </head>
   <body>
     <script>
@@ -27,14 +17,14 @@
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
-            if (this.responseText == "ok") {
-              window.location.assign("../php/tervetuloa.php");
+            if (this.responseText.trim() == "ok") {
+              window.location.assign("../php/lue.php");
             } else {
               document.getElementById("result").innerHTML = this.responseText;
             }
           }
         };
-        xmlhttp.open("POST", "../php/kirjauduajax.php", true);
+        xmlhttp.open("POST", "../php/kirjauduadmin.php", true);
         xmlhttp.setRequestHeader(
           "Content-type",
           "application/x-www-form-urlencoded"
@@ -45,12 +35,12 @@
 
     <h2>Fill in!</h2>
     <form id="userlomake">
-      Nimi:
+      Admintunnus:
       <input
         type="text"
         name="tunnus"
         value=""
-        placeholder="Käyttäjätunnus..."
+        placeholder="Admintunnus..."
       /><br />
       Salasana:
       <input
@@ -62,10 +52,10 @@
       <input
         type="button"
         name="ok"
-        value="Lähetä"
+        value="Kirjaudu"
         onclick="lahetaKayttaja(this.form);"
       /><br />
     </form>
-    <p id="result">Palaute tähän</p>
+    <p id="result"></p>
   </body>
 </html>
