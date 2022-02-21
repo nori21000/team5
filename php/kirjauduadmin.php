@@ -20,7 +20,8 @@ catch(Exception $e){
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
-$sql="select * from admin where tunnus=? and salasana=SHA2(?, 256)";
+//$sql="select * from badmin where tunnus=? and salasana=SHA2(?, 256)";
+$sql="select * from badmin where tunnus=? and salasana=?";
 try{
     //Valmistellaan sql-lause
     $stmt=mysqli_prepare($yhteys, $sql);
@@ -32,7 +33,7 @@ try{
     //metodilla mysqli_stmt_get_result($stmt);
     $tulos=mysqli_stmt_get_result($stmt);
     if ($rivi=mysqli_fetch_object($tulos)){
-        $_SESSION["admin"]="$rivi->tunnus";
+        $_SESSION["badmin"]="$rivi->tunnus";
         print "ok";
         exit;
     }
@@ -42,5 +43,19 @@ try{
 }
 catch(Exception $e){
     print "Jokin virhe!";
+}
+?>
+
+
+<?php
+function tarkistaJson($json){
+    if (empty($json)){
+        return false;
+    }
+    $user=json_decode($json, false);
+    if (empty($user->tunnus) || empty($user->salasana)){
+        return false;
+    }
+    return $user;
 }
 ?>

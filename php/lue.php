@@ -1,16 +1,16 @@
 <?php
 session_start();
-if (!(isset($_SESSION["admin"]) && $_SESSION["admin"] == "admin")){
+if (!(isset($_SESSION["badmin"]) && $_SESSION["badmin"] == "admin1")){
     header("Location:../html/kirjauduadmin.html");
     exit;
 }
 include '../html/header.html';
-print "<h2>Tervetuloa ".$_SESSION["admin"]."!</h2>";
+print "<h2>Tervetuloa ".$_SESSION["badmin"]."!</h2>";
 ?>
 <?php 
 //mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 try{
-$yhteys=mysqli_connect("db", "root", "password", "registration");
+$yhteys=mysqli_connect("localhost", "TRTKP21A3_5", "DOH0GX1X", "wp_TRTKP21A3_5");
 }
 
 catch(Exception $e){
@@ -18,7 +18,7 @@ catch(Exception $e){
     exit;
 }
 
-$tulos=mysqli_query($yhteys, "select * from admin");
+$tulos=mysqli_query($yhteys, "select * from badmin");
 while($rivi=mysqli_fetch_object($tulos)){
     print "<li> $rivi->tunnus $rivi->salasana"."<a href='./poista.php?poistettava=$rivi->tunnus'>POISTA</a><a href='./muokkaa.php?muokattava=$rivi->tunnus'>MUOKKAA</a>";
 }

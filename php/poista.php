@@ -7,14 +7,14 @@ if (empty($poistettava)){
 }
 
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "registration");
+    $yhteys=mysqli_connect("localhost", "TRTKP21A3_5", "DOH0GX1X", "wp_TRTKP21A3_5");
 }
 
 catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
     exit;
 }
-$sql="delete from admin where tunnus=?";
+$sql="delete from badmin where tunnus=?";
 
 //valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);

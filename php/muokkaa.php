@@ -7,7 +7,7 @@ if (empty($muokattava)){
 }
 include '../html/header.html';
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "registration");
+    $yhteys=mysqli_connect("localhost", "TRTKP21A3_5", "DOH0GX1X", "wp_TRTKP21A3_5");
 }
 
 catch(Exception $e){
@@ -15,7 +15,7 @@ catch(Exception $e){
     exit;
 }
 
-$sql="select * from admin where tunnus=?";
+$sql="select * from badmin where tunnus=?";
 //valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);
 //sijoitetaan muuttujat oikeisiin paikkoihin
