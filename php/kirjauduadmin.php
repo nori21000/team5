@@ -11,7 +11,7 @@ mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 // mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "registration");
+    $yhteys=mysqli_connect("localhost", "TRTKP21A3_5", "DOH0GX1X", "wp_TRTKP21A3_5");
 }
 catch(Exception $e){
     print "Yhteysvirhe";
