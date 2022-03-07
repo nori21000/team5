@@ -30,7 +30,7 @@ try{
     $tulos=mysqli_stmt_get_result($stmt);
     if ($rivi=mysqli_fetch_object($tulos)){
         $_SESSION["users"]="$rivi->username";
-        print "ok";
+        print "kiitos";
         exit;
     }
     
@@ -38,7 +38,7 @@ try{
     
     //print $json;
 
-    print "kiitos";
+    print "kirjautuminen epäonnistui";
 }
 catch(Exception $e){
     print "Something went wrong!";

@@ -18,9 +18,9 @@ catch(Exception $e){
     exit;
 }
 
-$tulos=mysqli_query($yhteys, "select * from badmin");
+$tulos=mysqli_query($yhteys, "select * from users");
 while($rivi=mysqli_fetch_object($tulos)){
-    print "<li> $rivi->tunnus $rivi->salasana"."<a href='./poista.php?poistettava=$rivi->tunnus'>POISTA</a><a href='./muokkaa.php?muokattava=$rivi->tunnus'>MUOKKAA</a>";
+    print "<li> $rivi->username $rivi->password $rivi->email"."<a href='./poista.php?poistettava=$rivi->username'>POISTA</a><a href='./muokkaa.php?muokattava=$rivi->username'>MUOKKAA</a>";
 }
 print "<ol>";
 mysqli_close($yhteys);

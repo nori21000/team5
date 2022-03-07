@@ -24,7 +24,7 @@ catch(Exception $e){
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
-$sql="update badmin set salasana=sha2(?,256) where tunnus=?";
+$sql="update users set password=sha2(?,256) where username=?";
 
 //Valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);

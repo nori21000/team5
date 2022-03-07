@@ -20,8 +20,8 @@ catch(Exception $e){
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
-//$sql="select * from badmin where tunnus=? and salasana=SHA2(?, 256)";
-$sql="select * from badmin where tunnus=? and salasana=?";
+$sql="select * from users where username=? and password=SHA2(?, 256)";
+//$sql="select * from badmin where tunnus=? and salasana=?";
 try{
     //Valmistellaan sql-lause
     $stmt=mysqli_prepare($yhteys, $sql);
@@ -33,7 +33,7 @@ try{
     //metodilla mysqli_stmt_get_result($stmt);
     $tulos=mysqli_stmt_get_result($stmt);
     if ($rivi=mysqli_fetch_object($tulos)){
-        $_SESSION["badmin"]="$rivi->tunnus";
+        $_SESSION["badmin"]="$rivi->username";
         print "ok";
         exit;
     }

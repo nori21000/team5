@@ -14,12 +14,12 @@ catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
     exit;
 }
-$sql="delete from badmin where tunnus=?";
+$sql="delete from users where username=?";
 
 //valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);
 //sijoitetaan muuttujat oikeisiin paikkoihin
-mysqli_stmt_bind_param($stmt, 'i', $poistettava);
+mysqli_stmt_bind_param($stmt, 's', $poistettava);
 //suoritetaan sql-lause
 mysqli_stmt_execute($stmt);
 

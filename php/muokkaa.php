@@ -15,11 +15,11 @@ catch(Exception $e){
     exit;
 }
 
-$sql="select * from badmin where tunnus=?";
+$sql="select * from users where username=?";
 //valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);
 //sijoitetaan muuttujat oikeisiin paikkoihin
-mysqli_stmt_bind_param($stmt, 'i', $muokattava);
+mysqli_stmt_bind_param($stmt, 's', $muokattava);
 //suoritetaan sql-lause
 mysqli_stmt_execute($stmt);
 $tulos=mysqli_stmt_get_result($stmt);
@@ -31,8 +31,10 @@ if(!$rivi=mysqli_fetch_object($tulos)){
 
 ?>
 <form action='./paivita.php' method='post'>
-Tunnus:<input type='text' name='tunnus' value='<?php print $rivi->tunnus;?>' readonly><br>
-Salasana:<input type='text' name='salasana' value='<?php print $rivi->salasana;?>'><br>
+Tunnus:<input type='text' name='tunnus' value='<?php print $rivi->username;?>' readonly><br>
+Salasana:<input type='text' name='salasana' value='<?php print $rivi->password;?>'><br>
+Email:<input type='text' name='email' value='<?php print $rivi->email;?>' readonly><br>
+
 
 
 <input type="submit" name ='ok' value='OK'>
